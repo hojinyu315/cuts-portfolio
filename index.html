@@ -193,7 +193,7 @@
       min-height: 0;
       display: flex;
       align-items: flex-start;
-      padding: 72px 60px 84px;
+      padding: 56px 60px 84px;
       border-bottom: 1px solid var(--dyn-line);
       background: transparent;
       position: relative;
@@ -213,6 +213,11 @@
       );
       pointer-events: none;
     }
+
+    /* 상단 브랜드 배너 (보내준 이미지 그대로) */
+    .brand-banner { display: block; width: 100%; background: #EAF9F1; line-height: 0; }
+    .brand-banner img { width: 100%; height: auto; display: block; }
+    @media (max-width: 768px) { .brand-banner img { min-height: 180px; object-fit: cover; object-position: center; } }
 
     .hero-deco {
       position: absolute;
@@ -1378,49 +1383,13 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 </nav>
 <button class="scroll-top" type="button" aria-label="맨 위로 이동">↑</button>
 
+<!-- 상단 브랜드 배너 -->
+<div class="brand-banner">
+  <img src="webtoon-hero.webp" alt="NAVER WEBTOON">
+</div>
+
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-deco" aria-hidden="true">
-    <svg viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-      <g fill="none" stroke="#03D563" stroke-width="2.2" stroke-linejoin="round">
-        <!-- 웹툰 컷(패널) 프레임 -->
-        <g class="float-a" opacity="0.38">
-          <rect x="70" y="120" width="150" height="196" rx="16" transform="rotate(-8 145 218)"/>
-          <rect x="104" y="158" width="150" height="196" rx="16" transform="rotate(-8 179 256)" opacity="0.55"/>
-        </g>
-        <g class="float-b" opacity="0.32">
-          <rect x="1188" y="96" width="132" height="172" rx="15" transform="rotate(9 1254 182)"/>
-          <rect x="1224" y="286" width="112" height="146" rx="14" transform="rotate(-5 1280 359)" opacity="0.6"/>
-        </g>
-        <!-- 링 -->
-        <circle cx="352" cy="92" r="26" opacity="0.4"/>
-        <circle cx="1108" cy="452" r="34" opacity="0.32"/>
-        <circle cx="905" cy="74" r="15" opacity="0.45"/>
-        <circle cx="205" cy="452" r="19" opacity="0.4"/>
-      </g>
-      <!-- 재생 삼각형 -->
-      <g fill="#03D563">
-        <g class="float-b" opacity="0.22">
-          <path d="M300 214 L340 238 L300 262 Z"/>
-          <path d="M1092 168 L1126 188 L1092 208 Z"/>
-        </g>
-        <g class="float-a" opacity="0.16">
-          <path d="M560 62 L590 80 L560 98 Z"/>
-          <path d="M840 470 L872 489 L840 508 Z"/>
-        </g>
-      </g>
-      <!-- 점 -->
-      <g fill="#03D563" opacity="0.2">
-        <circle cx="430" cy="470" r="7"/><circle cx="676" cy="40" r="6"/>
-        <circle cx="1010" cy="300" r="8"/><circle cx="248" cy="58" r="5"/>
-        <circle cx="1348" cy="214" r="6"/>
-      </g>
-      <!-- 회전 링 -->
-      <g class="float-c" fill="none" stroke="#03D563" stroke-width="2.2" stroke-dasharray="10 14" opacity="0.28">
-        <circle cx="1298" cy="500" r="46"/>
-      </g>
-    </svg>
-  </div>
   <div class="hero-inner">
     <div class="profile-card">
       <img class="profile-photo" src="profile-round.png" alt="유호진">
