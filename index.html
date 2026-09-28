@@ -221,16 +221,17 @@
       z-index: 0;
       overflow: hidden;
     }
+    /* 캐릭터는 위·아래가 잘리지 않도록 높이 기준으로 배치 */
     .hero-char {
       position: absolute;
       display: block;
-      height: auto;
+      width: auto;
       user-select: none;
     }
-    .hero-char-left { left: -108px; bottom: -34px; width: 286px; }
-    .hero-char-right { right: 44px; top: 30px; width: 146px; }
-    @media (max-width: 1400px) { .hero-char-left { left: -96px; width: 270px; } .hero-char-right { right: 16px; width: 124px; } }
-    @media (max-width: 1100px) { .hero-char-right { display: none; } .hero-char-left { width: 210px; left: -96px; opacity: 0.5; } }
+    .hero-char-left { left: -72px; bottom: 10px; height: 252px; max-height: calc(100% - 24px); }
+    .hero-char-right { right: 40px; top: 26px; height: 238px; max-height: calc(100% - 40px); }
+    @media (max-width: 1400px) { .hero-char-left { left: -92px; height: 232px; } .hero-char-right { right: 14px; height: 206px; } }
+    @media (max-width: 1100px) { .hero-char-right { display: none; } .hero-char-left { height: 200px; left: -70px; opacity: 0.45; } }
     .hero-deco .float-a { animation: deco-float 7s ease-in-out infinite alternate; }
     .hero-deco .float-b { animation: deco-float 9s ease-in-out infinite alternate-reverse; }
     .hero-deco .float-c { animation: deco-spin 26s linear infinite; transform-origin: center; }
